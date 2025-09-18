@@ -47,7 +47,7 @@ const appScreens = [
 
 export function AppShowcase() {
   return (
-    <section className="py-24">
+    <section id="app" className="py-24 scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
@@ -72,7 +72,7 @@ export function AppShowcase() {
               />
 
               <div className="relative z-10 flex h-full flex-col items-center text-center">
-                <div className="relative mx-auto aspect-[9/19] w-full max-w-[200px] flex-none rounded-[2.5rem] border border-white/10 bg-black/90 p-2.5 shadow-[0_25px_50px_-24px_rgba(0,0,0,0.75)] transition-transform duration-500 will-change-transform transform-gpu group-hover:scale-105">
+                <div className="relative mx-auto aspect-[9/19] w-full max-w-[200px] flex-none rounded-[2.5rem] border border-white/10 bg-black/90 p-2.5 shadow-[0_25px_50px_-24px_rgba(0,0,0,0.75)] transition-transform duration-300 will-change-transform transform-gpu group-hover:scale-105">
                   <div className="absolute top-3 left-1/2 h-1.5 w-12 -translate-x-1/2 rounded-full bg-white/10" />
                   <div className="absolute top-6 left-1/2 h-1 w-16 -translate-x-1/2 rounded-full bg-white/5 blur-sm" />
                   <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] border border-white/5">
