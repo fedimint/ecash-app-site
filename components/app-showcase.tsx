@@ -6,42 +6,42 @@ const appScreens = [
   {
     title: "QR Code Payments",
     description: "Scan and pay instantly with secure QR codes",
-    image: "/assets/app-qr-receive.png",
+    image: "/ecash-app-site/app-qr-receive.png",
   },
   {
     title: "Lightning Network",
     description: "Fast lightning network transactions",
-    image: "/assets/app-lightning-request.png",
+    image: "/ecash-app-site/app-lightning-request.png",
   },
   {
     title: "Transaction History",
     description: "Track all your payments and receipts",
-    image: "/assets/app-transaction-history.png",
+    image: "/ecash-app-site/app-transaction-history.png",
   },
   {
     title: "Wallet Balance",
     description: "Monitor your ecash balance in real-time",
-    image: "/assets/app-wallet-balance.png",
+    image: "/ecash-app-site/app-wallet-balance.png",
   },
   {
     title: "Discover Federations",
     description: "Find and join new federations right from the app",
-    image: "/assets/app-discover-federations.png",
+    image: "/ecash-app-site/app-discover-federations.png",
   },
   {
     title: "Automated Backup & Recovery",
     description: "Restore your wallet with familiar seed phrases",
-    image: "/assets/app-backup-create.png",
+    image: "/ecash-app-site/app-backup-create.png",
   },
   {
     title: "Lightning Address",
     description: "Claim and receive with your own Lightning Address",
-    image: "/assets/app-lightning-address.png",
+    image: "/ecash-app-site/app-lightning-address.png",
   },
   {
     title: "Nostr Wallet Connect",
     description: "Connect to Nostr apps for seamless zaps",
-    image: "/assets/app-nwc-connect.png",
+    image: "/ecash-app-site/app-nwc-connect.png",
   },
 ]
 
@@ -79,7 +79,7 @@ export function AppShowcase() {
                     <Image
                       fill
                       sizes="(max-width: 640px) 70vw, 200px"
-                      src={screen.image || "/placeholder.svg"}
+                      src={screen.image}
                       alt={screen.title}
                       className="h-full w-full object-cover"
                       quality={100}

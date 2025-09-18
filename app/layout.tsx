@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Analytics } from '@vercel/analytics/next'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
@@ -17,14 +16,16 @@ export const metadata: Metadata = {
     'Ecash App',
     'digital wallet',
     'lightning network',
-    'bitcoin payments',
-    'federated e-cash',
+    'bitcoin',
+    'ecash',
+    'fedimint',
   ],
-  authors: [{ name: 'Ecash App Team' }],
+  authors: [{ name: 'Fedimint Developers' }],
+  metadataBase: new URL('https://fedimint.github.io/ecash-app-site/'),
   icons: {
-    icon: '/assets/app-logo.svg',
-    shortcut: '/assets/app-logo.svg',
-    apple: '/assets/app-logo.svg',
+    icon: '/app-logo.svg',
+    shortcut: '/app-logo.svg',
+    apple: '/app-logo.svg',
   },
   openGraph: {
     title: 'Ecash App',
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Ecash App',
     images: [
       {
-        url: '/assets/app-hero.png',
+        url: '/app-hero.png',
         width: 1200,
         height: 630,
         alt: 'Ecash App transaction history screen',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecash App',
     description: 'Experience lightning-fast payments without limits in one secure digital wallet.',
-    images: ['/assets/app-hero.png'],
+    images: ['/app-hero.png'],
   },
 }
 
@@ -58,7 +59,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         {children}
-        <Analytics />
       </body>
     </html>
   )

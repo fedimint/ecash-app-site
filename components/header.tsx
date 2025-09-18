@@ -11,7 +11,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <div className="relative h-7 w-7">
               <Image
-                src="/assets/app-logo.svg"
+                src="/ecash-app-site/app-logo.svg"
                 alt="Ecash App logo"
                 fill
                 priority
@@ -20,18 +20,6 @@ export function Header() {
             </div>
             <span className="font-bold text-xl">Ecash App</span>
           </div>
-
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
-              Features
-            </a>
-            <a href="#app" className="text-sm font-medium hover:text-primary transition-colors">
-              App
-            </a>
-            <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-              About
-            </a>
-          </nav>
 
           <Button
             asChild

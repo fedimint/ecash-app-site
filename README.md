@@ -45,14 +45,14 @@ This repository contains the marketing site for the Fedimint [Ecash App](https:/
 
 - `app/` – App Router entrypoints. `app/page.tsx` stitches together the header, hero, feature grid, and showcase sections.
 - `components/` – Marketing modules (`header.tsx`, `hero-section.tsx`, `features-section.tsx`, `app-showcase.tsx`) and shared UI primitives under `components/ui`.
-- `public/assets/` – PNG renders of the mobile app used throughout the layout. Replace these to update screenshots without touching code.
+- `public/` – PNG renders of the mobile app used throughout the layout. Replace these to update screenshots without touching code.
 - `styles/globals.css` – Tailwind base layer plus brand color tokens. Tweaking values here cascades through the entire theme.
 
 ## Editing Content
 
 - Update top-level marketing copy in the respective component files inside `components/`.
 - Adjust CTA targets (e.g., APK download URL) by editing the button props inside `hero-section.tsx` and `header.tsx`.
-- To add or remove showcased screens, modify the `appScreens` array in `components/app-showcase.tsx` and drop new assets in `public/assets/`.
+- To add or remove showcased screens, modify the `appScreens` array in `components/app-showcase.tsx` and drop new assets in `public/`.
 
 ## Deployment
 
