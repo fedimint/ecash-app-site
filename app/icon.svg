@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="ecashGradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#6ba6ff" />
+      <stop offset="100%" stop-color="#3457f1" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#ecashGradient)" />
+  <path
+    fill="#0f172a"
+    d="M18 20c0-2.209 1.791-4 4-4h24v6H24v8h16c2.21 0 4 1.79 4 4s-1.79 4-4 4H24v8h22v6H22c-2.209 0-4-1.791-4-4z"
+    opacity="0.35"
+  />
+  <path
+    fill="#ffffff"
+    d="M20 18h22c2.21 0 4 1.79 4 4s-1.79 4-4 4H26v6h14c2.21 0 4 1.79 4 4s-1.79 4-4 4H26v6h16c2.21 0 4 1.79 4 4s-1.79 4-4 4H20z"
+  />
+  <circle cx="44" cy="20" r="4" fill="#94c5ff" opacity="0.9" />
+</svg>

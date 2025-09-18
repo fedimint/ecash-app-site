@@ -25,7 +25,7 @@ const features = [
   {
     icon: Shield,
     title: "Backup & Recovery",
-    description: "Keep your ecash safe using a secure backup and recovery system",
+    description: "Keep your e-cash safe using a secure backup and recovery system",
   },
 ]
 
