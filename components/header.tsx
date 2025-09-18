@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Github } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
@@ -10,7 +11,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <div className="relative h-7 w-7">
               <Image
-                src="/assets/app-logo.png"
+                src="/assets/app-logo.svg"
                 alt="Ecash App logo"
                 fill
                 priority
@@ -32,7 +33,22 @@ export function Header() {
             </a>
           </nav>
 
-          <Button size="sm">Download APK</Button>
+          <Button
+            asChild
+            size="sm"
+            aria-label="Open on GitHub"
+          >
+            <a
+              href="https://github.com/fedimint/e-cash-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={0}
+              aria-label="Open on GitHub"
+            >
+              Open on GitHub <Github className="w-4 h-4" />
+              
+            </a>
+          </Button>
         </div>
       </div>
     </header>

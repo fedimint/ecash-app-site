@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Ecash App Team' }],
   icons: {
-    icon: '/assets/app-logo.png',
-    shortcut: '/assets/app-logo.png',
-    apple: '/assets/app-logo.png',
+    icon: '/assets/app-logo.svg',
+    shortcut: '/assets/app-logo.svg',
+    apple: '/assets/app-logo.svg',
   },
   openGraph: {
     title: 'Ecash App',

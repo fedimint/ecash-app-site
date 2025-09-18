@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
-export function HeroSection() {
+interface HeroSectionProps {
+  apkDownloadUrl: string
+}
+
+export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-24">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted" />
 
@@ -23,12 +28,16 @@ export function HeroSection() {
                 Experience lightning-fast transactions with our next-generation ecash platform. Secure, private, and
                 built for the future of digital payments.
               </p>
+              <p className="text-sm text-muted-foreground flex items-center gap-1"> 
+                Powered by <a href="https://fedimint.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 justify-center"><Image src="/assets/fedimint-icon.png" alt="Fedimint logo" width={16} height={16} /><span className="font-medium text-foreground">  Fedimint</span></a>
+              </p>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group">
-                Download Latest APK
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Button asChild size="lg" className="group">
+                <a href={apkDownloadUrl} target="_blank" rel="noopener noreferrer">
+                  Download Latest APK
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button variant="outline" size="lg">
                 Learn More
