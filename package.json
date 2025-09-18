@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "pnpm dlx serve@latest out",
+    "clean": "rm -rf .next out",
     "lint": "next lint"
   },
   "dependencies": {
@@ -57,8 +58,7 @@
     "sonner": "^1.7.4",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.9",
-    "zod": "3.25.67"
+    "vaul": "^0.9.9"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.9",
