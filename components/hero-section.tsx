@@ -20,13 +20,13 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
             <div className="space-y-4">
 
               <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight">
-                Digital payments
-                <span className="text-primary block">without limits</span>
+                Control your
+                <span className="text-primary block text-8xl">Ecash</span>
               </h1>
 
               <p className="text-xl text-muted-foreground text-pretty max-w-lg">
-                Experience lightning-fast transactions with our next-generation ecash platform. Secure, private, and
-                built for the future of digital payments.
+                Experience lightning-fast payments with our next generation Bitcoin wallet. 
+                Secure, private, and feature rich.
               </p>
               <p className="text-sm text-muted-foreground flex items-center gap-1"> 
                 Powered by <a href="https://fedimint.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 justify-center">
@@ -42,21 +42,30 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
                 </a>
               </Button>
               <Button variant="outline" size="lg">
-                Learn More
+                <a href={"https://fedimint.org"} target="_blank" rel="noopener noreferrer">
+                  Learn More
+                </a>
               </Button>
             </div>
           </div>
 
           {/* Right content - Phone mockup */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
+            <div className="group relative">
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150" />
+              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150 transition-all duration-300 group-hover:scale-140" />
 
               {/* Phone frame */}
-              <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl w-[240px] sm:w-[280px] md:w-[320px]">
+              <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl w-[280px] sm:w-[280px] md:w-[360px] transition-transform duration-300 will-change-transform transform-gpu group-hover:scale-105">
                 <div className="bg-background rounded-2xl overflow-hidden">
-                  <img src="/ecash-app-site/app-hero.png" alt="Ecash app lightning receive screen" className="w-full h-auto" />
+                  <Image
+                    src="/ecash-app-site/app-hero.png"
+                    alt="Ecash app lightning receive screen"
+                    width={1080}
+                    height={2400}
+                    quality={100}
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>

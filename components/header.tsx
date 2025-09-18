@@ -24,16 +24,16 @@ export function Header() {
           <Button
             asChild
             size="sm"
-            aria-label="Open on GitHub"
+            aria-label="View on GitHub"
           >
             <a
               href="https://github.com/fedimint/e-cash-app"
               target="_blank"
               rel="noopener noreferrer"
               tabIndex={0}
-              aria-label="Open on GitHub"
+              aria-label="View on GitHub"
             >
-              Open on GitHub <Github className="w-4 h-4" />
+              View on GitHub <Github className="w-4 h-4" />
               
             </a>
           </Button>
