@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 import { Card } from "@/components/ui/card"
 
 const appScreens = [
@@ -70,14 +72,18 @@ export function AppShowcase() {
               />
 
               <div className="relative z-10 flex h-full flex-col items-center text-center">
-                <div className="relative mx-auto aspect-[9/19] w-full max-w-[200px] flex-none rounded-[2.5rem] border border-white/10 bg-black/90 p-2.5 shadow-[0_25px_50px_-24px_rgba(0,0,0,0.75)] transition-transform duration-500 group-hover:scale-105">
+                <div className="relative mx-auto aspect-[9/19] w-full max-w-[200px] flex-none rounded-[2.5rem] border border-white/10 bg-black/90 p-2.5 shadow-[0_25px_50px_-24px_rgba(0,0,0,0.75)] transition-transform duration-500 will-change-transform transform-gpu group-hover:scale-105">
                   <div className="absolute top-3 left-1/2 h-1.5 w-12 -translate-x-1/2 rounded-full bg-white/10" />
                   <div className="absolute top-6 left-1/2 h-1 w-16 -translate-x-1/2 rounded-full bg-white/5 blur-sm" />
                   <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] border border-white/5">
-                    <img
+                    <Image
+                      fill
+                      sizes="(max-width: 640px) 70vw, 200px"
                       src={screen.image || "/placeholder.svg"}
                       alt={screen.title}
                       className="h-full w-full object-cover"
+                      quality={100}
+                      priority={index === 0}
                     />
                   </div>
                 </div>
