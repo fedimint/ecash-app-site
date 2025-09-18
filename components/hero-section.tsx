@@ -43,7 +43,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150" />
 
               {/* Phone frame */}
-              <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl">
+              <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl w-[240px] sm:w-[280px] md:w-[320px]">
                 <div className="bg-background rounded-2xl overflow-hidden">
                   <img src="/assets/hero-lightning-receive.png" alt="Ecash app lightning receive screen" className="w-full h-auto" />
                 </div>
