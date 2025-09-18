@@ -4,22 +4,22 @@ const appScreens = [
   {
     title: "QR Code Payments",
     description: "Scan and pay instantly with secure QR codes",
-    image: "/mobile-app-qr-code-payment-screen-dark-theme.jpg",
+    image: "/assets/app-qr-receive.png",
   },
   {
     title: "Lightning Network",
     description: "Fast lightning network transactions",
-    image: "/mobile-app-lightning-network-payment-screen-dark-t.jpg",
+    image: "/assets/app-lightning-request.png",
   },
   {
     title: "Transaction History",
     description: "Track all your payments and receipts",
-    image: "/mobile-app-transaction-history-screen-dark-theme.jpg",
+    image: "/assets/app-transaction-history.png",
   },
   {
     title: "Wallet Balance",
     description: "Monitor your e-cash balance in real-time",
-    image: "/mobile-app-wallet-balance-screen-dark-theme.jpg",
+    image: "/assets/app-wallet-balance.png",
   },
 ]
 
@@ -38,22 +38,33 @@ export function AppShowcase() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {appScreens.map((screen, index) => (
             <Card
               key={index}
-              className="group overflow-hidden border-border/50 hover:border-primary/20 transition-all duration-300"
+              className="group relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-border/40 bg-gradient-to-b from-background/60 via-background/40 to-background/80 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-primary/20"
             >
-              <div className="aspect-[9/16] relative overflow-hidden">
-                <img
-                  src={screen.image || "/placeholder.svg"}
-                  alt={screen.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 space-y-1">
-                  <h3 className="font-semibold text-sm text-foreground">{screen.title}</h3>
-                  <p className="text-xs text-muted-foreground">{screen.description}</p>
+              <div
+                className="pointer-events-none absolute -inset-px rounded-[inherit] bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                aria-hidden
+              />
+
+              <div className="relative z-10 flex h-full flex-col items-center text-center">
+                <div className="relative mx-auto aspect-[9/19] w-full max-w-[220px] flex-none rounded-[2.5rem] border border-white/10 bg-black/90 p-3 shadow-[0_25px_50px_-24px_rgba(0,0,0,0.75)]">
+                  <div className="absolute top-3 left-1/2 h-1.5 w-12 -translate-x-1/2 rounded-full bg-white/10" />
+                  <div className="absolute top-6 left-1/2 h-1 w-16 -translate-x-1/2 rounded-full bg-white/5 blur-sm" />
+                  <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] border border-white/5">
+                    <img
+                      src={screen.image || "/placeholder.svg"}
+                      alt={screen.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+
+                <div className="mt-6 space-y-2">
+                  <h3 className="text-base font-semibold text-foreground">{screen.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{screen.description}</p>
                 </div>
               </div>
             </Card>

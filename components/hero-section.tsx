@@ -49,7 +49,7 @@ export function HeroSection() {
               {/* Phone frame */}
               <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl">
                 <div className="bg-background rounded-2xl overflow-hidden">
-                  <img src="/modern-e-cash-app-interface-with-qr-code-and-trans.jpg" alt="E-Cash App Interface" className="w-full h-auto" />
+                  <img src="/assets/hero-lightning-receive.png" alt="E-Cash app lightning receive screen" className="w-full h-auto" />
                 </div>
               </div>
             </div>
