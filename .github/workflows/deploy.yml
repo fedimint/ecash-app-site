@@ -59,7 +59,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out${{ env.PAGES_BASE_PATH }}
+          path: ./out
 
   deploy:
     needs: build
