@@ -21,6 +21,26 @@ const appScreens = [
     description: "Monitor your e-cash balance in real-time",
     image: "/assets/app-wallet-balance.png",
   },
+  {
+    title: "Discover Federations",
+    description: "Find and join new federations right from the app",
+    image: "/assets/app-discover-federations.png",
+  },
+  {
+    title: "Automated Backup & Recovery",
+    description: "Restore your wallet with familiar seed phrases",
+    image: "/assets/app-backup-create.png",
+  },
+  {
+    title: "Lightning Address",
+    description: "Claim and receive with your own Lightning Address",
+    image: "/assets/app-lightning-address.png",
+  },
+  {
+    title: "Nostr Wallet Connect",
+    description: "Connect to Nostr apps for seamless zaps",
+    image: "/assets/app-nwc-connect.png",
+  },
 ]
 
 export function AppShowcase() {
@@ -38,11 +58,11 @@ export function AppShowcase() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {appScreens.map((screen, index) => (
             <Card
               key={index}
-              className="group relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-border/40 bg-gradient-to-b from-background/60 via-background/40 to-background/80 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-primary/20"
+              className="group relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-border/40 bg-gradient-to-b from-background/60 via-background/40 to-background/80 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-primary/20 shadow-primary/10"
             >
               <div
                 className="pointer-events-none absolute -inset-px rounded-[inherit] bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
