@@ -15,7 +15,7 @@ export function HeroSection() {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
                 <Smartphone className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-primary">The E-Cash App</span>
+                <span className="text-sm font-medium text-primary">Ecash App</span>
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight">
@@ -24,7 +24,7 @@ export function HeroSection() {
               </h1>
 
               <p className="text-xl text-muted-foreground text-pretty max-w-lg">
-                Experience lightning-fast transactions with our next-generation e-cash platform. Secure, private, and
+                Experience lightning-fast transactions with our next-generation ecash platform. Secure, private, and
                 built for the future of digital payments.
               </p>
             </div>
@@ -49,7 +49,7 @@ export function HeroSection() {
               {/* Phone frame */}
               <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl">
                 <div className="bg-background rounded-2xl overflow-hidden">
-                  <img src="/assets/hero-lightning-receive.png" alt="E-Cash app lightning receive screen" className="w-full h-auto" />
+                  <img src="/assets/hero-lightning-receive.png" alt="Ecash app lightning receive screen" className="w-full h-auto" />
                 </div>
               </div>
             </div>

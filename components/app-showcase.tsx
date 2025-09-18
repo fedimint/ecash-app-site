@@ -18,7 +18,7 @@ const appScreens = [
   },
   {
     title: "Wallet Balance",
-    description: "Monitor your e-cash balance in real-time",
+    description: "Monitor your ecash balance in real-time",
     image: "/assets/app-wallet-balance.png",
   },
   {
@@ -54,7 +54,7 @@ export function AppShowcase() {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-balance">
-            The E-Cash App supports Lightning, On-chain and E-Cash payments in a single unified wallet
+            Ecash App supports Lightning, On-chain and Ecash payments in a single unified wallet
           </h2>
         </div>
 
@@ -70,7 +70,7 @@ export function AppShowcase() {
               />
 
               <div className="relative z-10 flex h-full flex-col items-center text-center">
-                <div className="relative mx-auto aspect-[9/19] w-full max-w-[220px] flex-none rounded-[2.5rem] border border-white/10 bg-black/90 p-3 shadow-[0_25px_50px_-24px_rgba(0,0,0,0.75)]">
+                <div className="relative mx-auto aspect-[9/19] w-full max-w-[200px] flex-none rounded-[2.5rem] border border-white/10 bg-black/90 p-2.5 shadow-[0_25px_50px_-24px_rgba(0,0,0,0.75)]">
                   <div className="absolute top-3 left-1/2 h-1.5 w-12 -translate-x-1/2 rounded-full bg-white/10" />
                   <div className="absolute top-6 left-1/2 h-1 w-16 -translate-x-1/2 rounded-full bg-white/5 blur-sm" />
                   <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] border border-white/5">

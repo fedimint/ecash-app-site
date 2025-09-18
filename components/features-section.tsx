@@ -5,7 +5,7 @@ const features = [
   {
     icon: ArrowUpDown,
     title: "Choose your payment method",
-    description: "Lightning, On-chain and E-Cash payments in a single unified wallet",
+    description: "Lightning, On-chain and Ecash payments in a single unified wallet",
   },
   {
     icon: Zap,
@@ -15,7 +15,7 @@ const features = [
   {
     icon: Link,
     title: "Mint Wallet Connect",
-    description: "Connect Fedi E-Cash to Mint wallets and manage your digital assets seamlessly",
+    description: "Connect Fedi Ecash to Mint wallets and manage your digital assets seamlessly",
   },
   {
     icon: Search,
@@ -25,7 +25,7 @@ const features = [
   {
     icon: Shield,
     title: "Backup & Recovery",
-    description: "Keep your e-cash safe using a secure backup and recovery system",
+    description: "Keep your ecash safe using a secure backup and recovery system",
   },
 ]
 
