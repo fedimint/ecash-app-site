@@ -29,7 +29,9 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
                 built for the future of digital payments.
               </p>
               <p className="text-sm text-muted-foreground flex items-center gap-1"> 
-                Powered by <a href="https://fedimint.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 justify-center"><Image src="/assets/fedimint-icon.png" alt="Fedimint logo" width={16} height={16} /><span className="font-medium text-foreground">  Fedimint</span></a>
+                Powered by <a href="https://fedimint.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 justify-center">
+                  <Image src="/ecash-app-site/fedimint-icon.png" alt="Fedimint logo" width={16} height={16} />
+                  <span className="font-medium text-foreground">Fedimint</span></a>
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -54,7 +56,7 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
               {/* Phone frame */}
               <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl w-[240px] sm:w-[280px] md:w-[320px]">
                 <div className="bg-background rounded-2xl overflow-hidden">
-                  <img src="/assets/app-hero.png" alt="Ecash app lightning receive screen" className="w-full h-auto" />
+                  <img src="/ecash-app-site/app-hero.png" alt="Ecash app lightning receive screen" className="w-full h-auto" />
                 </div>
               </div>
             </div>
