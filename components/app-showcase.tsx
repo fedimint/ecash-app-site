@@ -65,7 +65,7 @@ export function AppShowcase() {
               className="group relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-border/40 bg-gradient-to-b from-background/60 via-background/40 to-background/80 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-primary/20 shadow-primary/10"
             >
               <div
-                className="pointer-events-none absolute -inset-px rounded-[inherit] bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="pointer-events-none absolute -inset-px rounded-[inherit] bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-100"
                 aria-hidden
               />
 
