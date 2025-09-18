@@ -18,19 +18,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - uses: pnpm/action-setup@v4
+        name: Setup pnpm
         with:
           version: 10
           run_install: false
 
       - uses: actions/setup-node@v4
+        name: Setup Node
         with:
           node-version: 22
           cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Setup Pages
         id: setup_pages
@@ -52,9 +56,10 @@ jobs:
         env:
           PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out/${{ env.PAGES_BASE_PATH }}
+          path: ./out${{ env.PAGES_BASE_PATH }}
 
   deploy:
     needs: build
@@ -63,5 +68,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy Pages
+        id: deployment
         uses: actions/deploy-pages@v4
