@@ -13,10 +13,6 @@ export function HeroSection() {
           {/* Left content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
-                <Smartphone className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-primary">Ecash App</span>
-              </div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight">
                 Digital payments
