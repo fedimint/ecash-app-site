@@ -1,5 +1,6 @@
+import Image from "next/image"
+
 import { Button } from "@/components/ui/button"
-import { Smartphone } from "lucide-react"
 
 export function Header() {
   return (
@@ -7,8 +8,14 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Smartphone className="w-5 h-5 text-primary-foreground" />
+            <div className="relative h-7 w-7">
+              <Image
+                src="/assets/app-logo.png"
+                alt="Ecash App logo"
+                fill
+                priority
+                className="object-contain"
+              />
             </div>
             <span className="font-bold text-xl">Ecash App</span>
           </div>

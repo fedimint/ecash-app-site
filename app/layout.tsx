@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Ecash App Team' }],
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/assets/app-logo.png',
+    shortcut: '/assets/app-logo.png',
+    apple: '/assets/app-logo.png',
   },
   openGraph: {
     title: 'Ecash App',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Ecash App',
     images: [
       {
-        url: '/assets/app-transaction-history.png',
+        url: '/assets/app-hero.png',
         width: 1200,
         height: 630,
         alt: 'Ecash App transaction history screen',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecash App',
     description: 'Experience lightning-fast payments without limits in one secure digital wallet.',
-    images: ['/assets/app-transaction-history.png'],
+    images: ['/assets/app-hero.png'],
   },
 }
 
