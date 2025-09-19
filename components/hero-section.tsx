@@ -35,14 +35,14 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="group">
+              <Button asChild aria-label="Download Latest APK" size="lg" className="group">
                 <a href={apkDownloadUrl} target="_blank" rel="noopener noreferrer">
                   Download Latest APK
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg">
-                <a href={"https://fedimint.org"} target="_blank" rel="noopener noreferrer">
+              <Button asChild aria-label="Learn More" variant="outline" size="lg">
+                <a href="https://fedimint.org" tabIndex={0} target="_blank" rel="noopener noreferrer">
                   Learn More
                 </a>
               </Button>
@@ -51,12 +51,10 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
 
           {/* Right content - Phone mockup */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="group relative">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150 transition-all duration-300 group-hover:scale-140" />
+            <div className="relative">
 
               {/* Phone frame */}
-              <div className="relative bg-card border border-border rounded-3xl p-2 shadow-2xl w-[280px] sm:w-[280px] md:w-[360px] transition-transform duration-300 will-change-transform transform-gpu group-hover:scale-105">
+              <div className="peer relative bg-card border border-border rounded-3xl p-2 shadow-2xl w-[280px] sm:w-[280px] md:w-[360px] transition-transform duration-500 will-change-transform transform-gpu hover:scale-105">
                 <div className="bg-background rounded-2xl overflow-hidden">
                   <Image
                     src="/ecash-app-site/app-hero.png"
@@ -68,6 +66,8 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
                   />
                 </div>
               </div>
+              {/* Glow effect */}
+              <div className="peer absolute z-[-1] inset-0 bg-primary/20 blur-3xl rounded-full scale-150 transition-all duration-500 peer-hover:scale-140" />
             </div>
           </div>
         </div>
