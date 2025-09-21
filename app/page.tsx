@@ -15,7 +15,7 @@ export default async function Home() {
       <Header />
       <HeroSection apkDownloadUrl={apkDownloadUrl} />
       <AppShowcase />
-      <section className="container flex flex-col gap-12">
+      <section className="container flex flex-col gap-12 mx-auto">
         <div className="mx-auto px-4 flex justify-center flex-col sm:flex-row gap-4">
           <Button asChild aria-label="Download Latest APK" size="lg" className="group">
             <a href={apkDownloadUrl} target="_blank" rel="noopener noreferrer">
