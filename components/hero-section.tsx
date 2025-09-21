@@ -13,7 +13,7 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-20 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-8">
