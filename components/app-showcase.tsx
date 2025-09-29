@@ -6,42 +6,42 @@ const appScreens = [
   {
     title: "QR Code Payments",
     description: "Scan and pay instantly with secure QR codes",
-    image: "/ecash-app-site/app-qr-receive.png",
+    image: "/app-qr-receive.png",
   },
   {
     title: "Lightning Network",
     description: "Fast lightning network transactions",
-    image: "/ecash-app-site/app-lightning-request.png",
+    image: "/app-lightning-request.png",
   },
   {
     title: "Transaction History",
     description: "Track all your payments and receipts",
-    image: "/ecash-app-site/app-transaction-history.png",
+    image: "/app-transaction-history.png",
   },
   {
     title: "Wallet Balance",
     description: "Monitor your ecash balance in real-time",
-    image: "/ecash-app-site/app-wallet-balance.png",
+    image: "/app-wallet-balance.png",
   },
   {
     title: "Discover Federations",
     description: "Find and join new federations right from the app",
-    image: "/ecash-app-site/app-discover-federations.png",
+    image: "/app-discover-federations.png",
   },
   {
     title: "Automated Backup & Recovery",
     description: "Restore your wallet with familiar seed phrases",
-    image: "/ecash-app-site/app-backup-create.png",
+    image: "/app-backup-create.png",
   },
   {
     title: "Lightning Address",
     description: "Claim and receive with your own Lightning Address",
-    image: "/ecash-app-site/app-lightning-address.png",
+    image: "/app-lightning-address.png",
   },
   {
     title: "Nostr Wallet Connect",
     description: "Connect to Nostr apps for seamless zaps",
-    image: "/ecash-app-site/app-nwc-connect.png",
+    image: "/app-nwc-connect.png",
   },
 ]
 

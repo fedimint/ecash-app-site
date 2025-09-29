@@ -31,7 +31,7 @@ export default async function Home() {
         </div>
         <p className="text-sm text-muted-foreground flex items-center gap-1 mx-auto"> 
           Powered by <a href="https://fedimint.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 justify-center">
-            <Image src="/ecash-app-site/fedimint-icon.png" alt="Fedimint logo" width={16} height={16} />
+            <Image src="/fedimint-icon.png" alt="Fedimint logo" width={16} height={16} />
             <span className="font-medium text-foreground">Fedimint</span></a>
         </p>
       </section>

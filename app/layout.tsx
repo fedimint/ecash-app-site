@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'Fedimint Developers' }],
   metadataBase: new URL('https://fedimint.github.io/'),
   icons: {
-    icon: '/ecash-app-site/app-logo.svg',
-    shortcut: '/ecash-app-site/app-logo.svg',
-    apple: '/ecash-app-site/app-logo.svg',
+    icon: '/app-logo.svg',
+    shortcut: '/app-logo.svg',
+    apple: '/app-logo.svg',
   },
   openGraph: {
     title: 'Ecash App',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Ecash App',
     images: [
       {
-        url: '/ecash-app-site/app-hero.png',
+        url: '/app-hero.png',
         width: 1200,
         height: 630,
         alt: 'Ecash App transaction history screen',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecash App',
     description: 'Experience lightning-fast payments without limits in one secure digital wallet.',
-    images: ['/ecash-app-site/app-hero.png'],
+    images: ['/app-hero.png'],
   },
 }
 
