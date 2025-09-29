@@ -30,7 +30,7 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
               </p>
               <p className="text-sm text-muted-foreground flex items-center gap-1"> 
                 Powered by <a href="https://fedimint.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 justify-center">
-                  <Image src="/ecash-app-site/fedimint-icon.png" alt="Fedimint logo" width={16} height={16} />
+                  <Image src="/fedimint-icon.png" alt="Fedimint logo" width={16} height={16} />
                   <span className="font-medium text-foreground">Fedimint</span></a>
               </p>
             </div>
@@ -57,7 +57,7 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
               <div className="peer relative bg-card border border-border rounded-3xl p-2 shadow-2xl w-[280px] sm:w-[280px] md:w-[360px] transition-transform duration-500 will-change-transform transform-gpu hover:scale-105">
                 <div className="bg-background rounded-2xl overflow-hidden">
                   <Image
-                    src="/ecash-app-site/app-hero.png"
+                    src="/app-hero.png"
                     alt="Ecash app lightning receive screen"
                     width={1080}
                     height={2400}

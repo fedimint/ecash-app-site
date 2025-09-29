@@ -11,7 +11,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <div className="relative h-7 w-7">
               <Image
-                src="/ecash-app-site/app-logo.svg"
+                src="/app-logo.svg"
                 alt="Ecash App logo"
                 fill
                 priority

@@ -5,7 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",
-  basePath: process.env.PAGES_BASE_PATH
+  // basePath: process.env.PAGES_BASE_PATH
 }
 
 export default nextConfig
