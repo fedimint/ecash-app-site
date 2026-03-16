@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Smartphone, Monitor } from "lucide-react"
 import Image from "next/image"
 
 interface HeroSectionProps {
   apkDownloadUrl: string
+  appImageDownloadUrl: string
 }
 
-export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
+export function HeroSection({ apkDownloadUrl, appImageDownloadUrl }: HeroSectionProps) {
   return (
     <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-24">
       {/* Background gradient */}
@@ -34,16 +35,19 @@ export function HeroSection({ apkDownloadUrl }: HeroSectionProps) {
                   <span className="font-medium text-foreground">Fedimint</span></a>
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <Button asChild aria-label="Download Latest APK" size="lg" className="group">
                 <a href={apkDownloadUrl} target="_blank" rel="noopener noreferrer">
+                  <Smartphone className="w-4 h-4" />
                   Download Latest APK
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
-              <Button asChild aria-label="Learn More" variant="outline" size="lg">
-                <a href="https://fedimint.org" tabIndex={0} target="_blank" rel="noopener noreferrer">
-                  Learn More
+              <Button asChild aria-label="Download Linux AppImage" size="lg" className="group">
+                <a href={appImageDownloadUrl} target="_blank" rel="noopener noreferrer">
+                  <Monitor className="w-4 h-4" />
+                  Download Linux AppImage
+                  <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </div>
