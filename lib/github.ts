@@ -1,7 +1,7 @@
 import { cache } from "react";
 
 const GITHUB_RELEASES_URL =
-  "https://api.github.com/repos/fedimint/e-cash-app/releases";
+  "https://api.github.com/repos/fedimint/ecash-app/releases";
 
 interface GithubAsset {
   name: string;
@@ -92,6 +92,29 @@ export const getLatestApkDownloadUrl = cache(async (): Promise<string> => {
     }
   } catch (error) {
     console.error("Failed to resolve latest APK download URL:", error);
+  }
+
+  return GITHUB_RELEASES_URL;
+});
+
+export const getLatestAppImageDownloadUrl = cache(async (): Promise<string> => {
+  try {
+    const releases = await fetchGithubReleases();
+
+    const stableReleases = releases
+      .filter((release) => !release.draft && !release.prerelease)
+      .sort((a, b) => compareSemverDescending(a.tag_name, b.tag_name));
+
+    for (const release of stableReleases) {
+      const appImageAsset = release.assets?.find((asset) =>
+        asset.name.toLowerCase().endsWith(".appimage")
+      );
+      if (appImageAsset) {
+        return appImageAsset.browser_download_url;
+      }
+    }
+  } catch (error) {
+    console.error("Failed to resolve latest AppImage download URL:", error);
   }
 
   return GITHUB_RELEASES_URL;

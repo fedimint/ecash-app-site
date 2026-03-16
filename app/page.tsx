@@ -1,31 +1,37 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Smartphone, Monitor } from "lucide-react"
 import Image from "next/image"
 
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AppShowcase } from "@/components/app-showcase"
 import { Button } from "@/components/ui/button"
-import { getLatestApkDownloadUrl } from "@/lib/github"
+import { getLatestApkDownloadUrl, getLatestAppImageDownloadUrl } from "@/lib/github"
 
 export default async function Home() {
-  const apkDownloadUrl = await getLatestApkDownloadUrl()
+  const [apkDownloadUrl, appImageDownloadUrl] = await Promise.all([
+    getLatestApkDownloadUrl(),
+    getLatestAppImageDownloadUrl(),
+  ])
 
   return (
     <main className="min-h-screen pb-12">
       <Header />
-      <HeroSection apkDownloadUrl={apkDownloadUrl} />
+      <HeroSection apkDownloadUrl={apkDownloadUrl} appImageDownloadUrl={appImageDownloadUrl} />
       <AppShowcase />
       <section className="container flex flex-col gap-12 mx-auto">
         <div className="mx-auto px-4 flex justify-center flex-col sm:flex-row gap-4">
           <Button asChild aria-label="Download Latest APK" size="lg" className="group">
             <a href={apkDownloadUrl} target="_blank" rel="noopener noreferrer">
+              <Smartphone className="w-4 h-4" />
               Download Latest APK
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
-          <Button asChild aria-label="Learn More" variant="outline" size="lg">
-            <a href="https://fedimint.org" target="_blank" rel="noopener noreferrer">
-              Learn More
+          <Button asChild aria-label="Download Linux AppImage" size="lg" className="group">
+            <a href={appImageDownloadUrl} target="_blank" rel="noopener noreferrer">
+              <Monitor className="w-4 h-4" />
+              Download Linux AppImage
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
         </div>

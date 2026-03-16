@@ -21,22 +21,37 @@ export function Header() {
             <span className="font-bold text-xl">Ecash App</span>
           </div>
 
-          <Button
-            asChild
-            size="sm"
-            aria-label="View on GitHub"
-          >
-            <a
-              href="https://github.com/fedimint/e-cash-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              tabIndex={0}
+          <div className="flex items-center gap-2">
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              aria-label="Learn More"
+            >
+              <a
+                href="https://fedimint.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn More
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="sm"
               aria-label="View on GitHub"
             >
-              View on GitHub <Github className="w-4 h-4" />
-              
-            </a>
-          </Button>
+              <a
+                href="https://github.com/fedimint/ecash-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                tabIndex={0}
+                aria-label="View on GitHub"
+              >
+                View on GitHub <Github className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
