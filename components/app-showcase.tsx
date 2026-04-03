@@ -4,19 +4,9 @@ import { Card } from "@/components/ui/card"
 
 const appScreens = [
   {
-    title: "QR Code Payments",
-    description: "Scan and pay instantly with secure QR codes",
-    image: "/app-qr-receive.png",
-  },
-  {
-    title: "Lightning Network",
-    description: "Fast lightning network transactions",
-    image: "/app-lightning-request.png",
-  },
-  {
-    title: "Transaction History",
-    description: "Track all your payments and receipts",
-    image: "/app-transaction-history.png",
+    title: "Discover Federations",
+    description: "Find and join new federations right from the app",
+    image: "/app-discover-federations.png",
   },
   {
     title: "Wallet Balance",
@@ -24,9 +14,9 @@ const appScreens = [
     image: "/app-wallet-balance.png",
   },
   {
-    title: "Discover Federations",
-    description: "Find and join new federations right from the app",
-    image: "/app-discover-federations.png",
+    title: "Lightning Address",
+    description: "Claim and receive with your own Lightning Address",
+    image: "/app-lightning-address.png",
   },
   {
     title: "Automated Backup & Recovery",
@@ -34,14 +24,24 @@ const appScreens = [
     image: "/app-backup-create.png",
   },
   {
-    title: "Lightning Address",
-    description: "Claim and receive with your own Lightning Address",
-    image: "/app-lightning-address.png",
+    title: "Lightning Network",
+    description: "Fast lightning network transactions",
+    image: "/app-lightning-request.png",
   },
   {
     title: "Nostr Wallet Connect",
     description: "Connect to Nostr apps for seamless zaps",
     image: "/app-nwc-connect.png",
+  },
+  {
+    title: "Nostr Contacts",
+    description: "Send payments to your Nostr contacts directly from the app",
+    image: "/app-contacts.png",
+  },
+  {
+    title: "Federation Monitoring",
+    description: "Monitor guardian status, query UTXOs, and view registered gateways",
+    image: "/fed-preview.png",
   },
 ]
 
