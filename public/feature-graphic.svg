@@ -1,0 +1,68 @@
+<svg width="1024" height="500" viewBox="0 0 1024 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bg-glow" cx="50%" cy="50%" r="70%" fx="40%" fy="45%">
+      <stop offset="0%" stop-color="#1a2a4a" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </radialGradient>
+
+    <!-- Primary accent glow -->
+    <radialGradient id="logo-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3998d7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#3998d7" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Logo icon gradient (matches app icon) -->
+    <radialGradient id="icon-bg" cx="55%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#4ad6ff" />
+      <stop offset="40%" stop-color="#3998d7" />
+      <stop offset="100%" stop-color="#22409e" />
+    </radialGradient>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="500" fill="url(#bg-glow)" />
+  <rect width="1024" height="500" fill="url(#grid)" />
+
+  <!-- Decorative glow behind logo -->
+  <ellipse cx="320" cy="250" rx="200" ry="200" fill="url(#logo-glow)" />
+
+  <!-- App icon (rounded square with ecash symbol) -->
+  <g transform="translate(240, 170)">
+    <!-- Rounded square background -->
+    <rect x="0" y="0" width="160" height="160" rx="36" ry="36" fill="url(#icon-bg)" />
+
+    <!-- Ecash symbol (the E/$-like symbol from the logo) -->
+    <g transform="translate(80, 80) scale(4.8)" stroke="#ffffff" stroke-width="1.411" stroke-linecap="round" fill="none">
+      <line x1="-7.7" y1="-5.6" x2="7.7" y2="-3.5" />
+      <line x1="-8.4" y1="-2.7" x2="7.6" y2="-0.6" />
+      <line x1="-9.1" y1="0.3" x2="6.9" y2="2.4" />
+      <line x1="-5.3" y1="-8.1" x2="-4.8" y2="-6.4" />
+      <line x1="-8.4" y1="3.3" x2="-7.9" y2="5.1" />
+    </g>
+  </g>
+
+  <!-- App name -->
+  <text x="470" y="228" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="64" fill="#f5f5f5" letter-spacing="-1">
+    Ecash App
+  </text>
+
+  <!-- Tagline -->
+  <text x="470" y="280" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="400" font-size="24" fill="#a1a1aa">
+    Control your ecash. Lightning-fast payments.
+  </text>
+
+  <!-- Subtle accent line -->
+  <rect x="470" y="296" width="60" height="3" rx="1.5" fill="#3998d7" opacity="0.8" />
+
+  <!-- "Powered by Fedimint" -->
+  <text x="470" y="330" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="400" font-size="16" fill="#71717a">
+    Powered by Fedimint
+  </text>
+</svg>

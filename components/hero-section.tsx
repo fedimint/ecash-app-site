@@ -51,6 +51,12 @@ export function HeroSection({ apkDownloadUrl, appImageDownloadUrl }: HeroSection
                 </a>
               </Button>
             </div>
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-muted-foreground">Also available on</span>
+              <a href="https://play.google.com/store/apps/details?id=org.fedimint.app&hl=en_US" target="_blank" rel="noopener noreferrer">
+                <Image src="/google-play-badge.png" alt="Get it on Google Play" width={140} height={42} />
+              </a>
+            </div>
           </div>
 
           {/* Right content - Phone mockup */}

@@ -35,6 +35,12 @@ export default async function Home() {
             </a>
           </Button>
         </div>
+        <div className="flex items-center justify-center gap-3">
+          <span className="text-sm text-muted-foreground">Also available on</span>
+          <a href="https://play.google.com/store/apps/details?id=org.fedimint.app&hl=en_US" target="_blank" rel="noopener noreferrer">
+            <Image src="/google-play-badge.png" alt="Get it on Google Play" width={140} height={42} />
+          </a>
+        </div>
         <p className="text-sm text-muted-foreground flex items-center gap-1 mx-auto"> 
           Powered by <a href="https://fedimint.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 justify-center">
             <Image src="/fedimint-icon.png" alt="Fedimint logo" width={16} height={16} />

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Feature Graphic</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1024px;
+      height: 500px;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+    }
+
+    .container {
+      width: 1024px;
+      height: 500px;
+      background: radial-gradient(ellipse at 40% 45%, #1a2a4a 0%, #111827 50%, #0a0a0a 100%);
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+      gap: 60px;
+      position: relative;
+    }
+
+    /* Subtle grid overlay */
+    .container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .icon-wrapper {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    /* Glow behind icon */
+    .icon-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(57,152,215,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .icon {
+      width: 160px;
+      height: 160px;
+      border-radius: 36px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .text-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .app-name {
+      font-size: 64px;
+      font-weight: 700;
+      color: #f5f5f5;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .tagline {
+      font-size: 24px;
+      font-weight: 400;
+      color: #a1a1aa;
+      margin-top: 12px;
+    }
+
+    .accent-line {
+      width: 60px;
+      height: 3px;
+      background: #3998d7;
+      border-radius: 2px;
+      margin-top: 16px;
+      opacity: 0.8;
+    }
+
+    .powered-by {
+      font-size: 16px;
+      color: #71717a;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon-wrapper">
+      <img class="icon" src="/ecash-app-icon.png" alt="Ecash App icon">
+    </div>
+    <div class="text-content">
+      <div class="app-name">Ecash App</div>
+      <div class="tagline">Control your ecash. Lightning-fast payments.</div>
+      <div class="accent-line"></div>
+      <div class="powered-by">Powered by Fedimint</div>
+    </div>
+  </div>
+</body>
+</html>
