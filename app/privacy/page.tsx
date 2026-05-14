@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for Ecash App by Frost Forge.",
+  description: "Privacy Policy for Ecash App by Frost Forge LLC.",
 }
 
 export default function PrivacyPolicy() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-3">Introduction</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Frost Forge (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;)
+              Frost Forge LLC (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;)
               develops Ecash App, an open-source, Bitcoin wallet
               built on Fedimint. We are committed to protecting your privacy.
               This policy explains what data the app handles, how it is stored,
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               Ecash App does not collect, store, or transmit any personal
-              information to Frost Forge. Specifically:
+              information to Frost Forge LLC. Specifically:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-1 mt-2">
               <li>No analytics or telemetry</li>
