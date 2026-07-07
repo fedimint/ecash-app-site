@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Smartphone, Monitor } from "lucide-react"
+import { ArrowRight, Smartphone, Monitor, Apple } from "lucide-react"
 import Image from "next/image"
 
 interface HeroSectionProps {
   apkDownloadUrl: string
   appImageDownloadUrl: string
+  dmgDownloadUrl: string
 }
 
-export function HeroSection({ apkDownloadUrl, appImageDownloadUrl }: HeroSectionProps) {
+export function HeroSection({ apkDownloadUrl, appImageDownloadUrl, dmgDownloadUrl }: HeroSectionProps) {
   return (
     <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-24">
       {/* Background gradient */}
@@ -47,6 +48,13 @@ export function HeroSection({ apkDownloadUrl, appImageDownloadUrl }: HeroSection
                 <a href={appImageDownloadUrl} target="_blank" rel="noopener noreferrer">
                   <Monitor className="w-4 h-4" />
                   Download Linux AppImage
+                  <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+              <Button asChild aria-label="Download macOS DMG" size="lg" className="group">
+                <a href={dmgDownloadUrl} target="_blank" rel="noopener noreferrer">
+                  <Apple className="w-4 h-4" />
+                  Download macOS DMG
                   <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
