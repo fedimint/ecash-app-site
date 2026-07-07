@@ -119,3 +119,26 @@ export const getLatestAppImageDownloadUrl = cache(async (): Promise<string> => {
 
   return GITHUB_RELEASES_URL;
 });
+
+export const getLatestDmgDownloadUrl = cache(async (): Promise<string> => {
+  try {
+    const releases = await fetchGithubReleases();
+
+    const stableReleases = releases
+      .filter((release) => !release.draft && !release.prerelease)
+      .sort((a, b) => compareSemverDescending(a.tag_name, b.tag_name));
+
+    for (const release of stableReleases) {
+      const dmgAsset = release.assets?.find((asset) =>
+        asset.name.toLowerCase().endsWith(".dmg")
+      );
+      if (dmgAsset) {
+        return dmgAsset.browser_download_url;
+      }
+    }
+  } catch (error) {
+    console.error("Failed to resolve latest DMG download URL:", error);
+  }
+
+  return GITHUB_RELEASES_URL;
+});

@@ -1,22 +1,23 @@
-import { ArrowRight, Smartphone, Monitor } from "lucide-react"
+import { ArrowRight, Smartphone, Monitor, Apple } from "lucide-react"
 import Image from "next/image"
 
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AppShowcase } from "@/components/app-showcase"
 import { Button } from "@/components/ui/button"
-import { getLatestApkDownloadUrl, getLatestAppImageDownloadUrl } from "@/lib/github"
+import { getLatestApkDownloadUrl, getLatestAppImageDownloadUrl, getLatestDmgDownloadUrl } from "@/lib/github"
 
 export default async function Home() {
-  const [apkDownloadUrl, appImageDownloadUrl] = await Promise.all([
+  const [apkDownloadUrl, appImageDownloadUrl, dmgDownloadUrl] = await Promise.all([
     getLatestApkDownloadUrl(),
     getLatestAppImageDownloadUrl(),
+    getLatestDmgDownloadUrl(),
   ])
 
   return (
     <main className="min-h-screen pb-12">
       <Header />
-      <HeroSection apkDownloadUrl={apkDownloadUrl} appImageDownloadUrl={appImageDownloadUrl} />
+      <HeroSection apkDownloadUrl={apkDownloadUrl} appImageDownloadUrl={appImageDownloadUrl} dmgDownloadUrl={dmgDownloadUrl} />
       <AppShowcase />
       <section className="container flex flex-col gap-12 mx-auto">
         <div className="mx-auto px-4 flex justify-center flex-col sm:flex-row gap-4">
@@ -31,6 +32,13 @@ export default async function Home() {
             <a href={appImageDownloadUrl} target="_blank" rel="noopener noreferrer">
               <Monitor className="w-4 h-4" />
               Download Linux AppImage
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </Button>
+          <Button asChild aria-label="Download macOS DMG" size="lg" className="group">
+            <a href={dmgDownloadUrl} target="_blank" rel="noopener noreferrer">
+              <Apple className="w-4 h-4" />
+              Download macOS DMG
               <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
