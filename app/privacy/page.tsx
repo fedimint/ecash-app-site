@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
       <div className="container mx-auto px-4 pt-24 max-w-3xl">
         <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
         <p className="text-muted-foreground mb-8">
-          Last updated: April 6, 2026
+          Last updated: September 9, 2026
         </p>
 
         <div className="prose prose-invert max-w-none space-y-8">
@@ -33,8 +33,8 @@ export default function PrivacyPolicy() {
               Data We Do Not Collect
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Ecash App does not collect, store, or transmit any personal
-              information to Frost Forge LLC. Specifically:
+              Ecash App has no analytics pipeline and no user accounts. The app
+              does not collect:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-1 mt-2">
               <li>No analytics or telemetry</li>
@@ -42,9 +42,14 @@ export default function PrivacyPolicy() {
               <li>No advertising or tracking SDKs</li>
               <li>No device identifiers or fingerprinting</li>
               <li>No email addresses, phone numbers, or real names</li>
-              <li>No location data</li>
               <li>No user accounts or passwords</li>
             </ul>
+            <p className="text-muted-foreground leading-relaxed mt-2">
+              Two things do leave your device, and both are described in full
+              below: a Lightning Address is claimed on your behalf when you join
+              a federation, and your location is sent to BTC Map if you open the
+              nearby merchants map. Everything else stays local to your device.
+            </p>
           </section>
 
           <section>
@@ -72,9 +77,9 @@ export default function PrivacyPolicy() {
               <li>Lightning Address credentials</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-2">
-              This data never leaves your device unless you explicitly initiate
-              an action that requires network communication, as described below.
-              Uninstalling the app removes all local data.
+              This data stays on your device except where an action requires
+              network communication, as described below. Uninstalling the app
+              removes all local data.
             </p>
           </section>
 
@@ -121,11 +126,45 @@ export default function PrivacyPolicy() {
               Lightning Address Services
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              By default, the app registers a Lightning Address on your behalf
-              to enable receiving Lightning payments. Your chosen username and
-              payment endpoint are sent to the Lightning Address service
-              provider (by default, ecash.love). You may opt out of this
-              feature in the app settings.
+              When you join a federation, the app automatically claims a
+              Lightning Address for you so that you can receive Lightning
+              payments. You are not asked to confirm this at the time. The
+              address and a recipient public key derived from your wallet are
+              stored by the Lightning Address service (by default ecash.love,
+              which we operate) for as long as the address remains registered.
+              That stored record is what allows someone paying you to resolve
+              your address to your wallet.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mt-2">
+              You can change or release your Lightning Address in the app
+              settings. Releasing it removes the registration from the service.
+            </p>
+
+            <h3 className="text-xl font-medium mt-4 mb-2">
+              Nearby Merchants Map
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              If you open the nearby merchants map, the app asks for location
+              permission and sends your coordinates to BTC Map (api.btcmap.org)
+              to search for businesses near you. Map imagery is loaded from
+              OpenFreeMap (tiles.openfreemap.org), which receives your IP
+              address and the area of the map you are viewing. Your location is
+              used only for that search. We do not store it, and it is not
+              linked to your wallet or your Lightning Address. No other part of
+              the app uses location, and if you never open this screen, no
+              location data is sent anywhere.
+            </p>
+
+            <h3 className="text-xl font-medium mt-4 mb-2">
+              Federation and Gateway Information
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              The app queries observer.fedimint.org to discover public
+              federations, and amboss.space for public information about
+              Lightning gateway nodes. Federations running on the Mutinynet test
+              network link to mutinynet.com as a block explorer. These carry no
+              personal information, though each provider may log your IP address
+              per its own privacy policy.
             </p>
           </section>
 
@@ -153,7 +192,28 @@ export default function PrivacyPolicy() {
               </li>
               <li>
                 <strong>ecash.love</strong> &mdash; Lightning Address
-                registration (enabled by default, can be opted out)
+                registration, claimed automatically when you join a federation
+                and releasable in settings
+              </li>
+              <li>
+                <strong>api.btcmap.org</strong> &mdash; receives your
+                coordinates when you open the nearby merchants map
+              </li>
+              <li>
+                <strong>tiles.openfreemap.org</strong> &mdash; map imagery,
+                derived from OpenStreetMap data
+              </li>
+              <li>
+                <strong>observer.fedimint.org</strong> &mdash; discovery of
+                public federations
+              </li>
+              <li>
+                <strong>amboss.space</strong> &mdash; public information about
+                Lightning gateway nodes
+              </li>
+              <li>
+                <strong>mutinynet.com</strong> &mdash; block explorer for the
+                Mutinynet test network
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-2">
@@ -165,7 +225,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-3">Permissions</h2>
             <p className="text-muted-foreground leading-relaxed">
-              The app requests the following Android permissions:
+              The app requests the following permissions:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-1 mt-2">
               <li>
@@ -185,11 +245,16 @@ export default function PrivacyPolicy() {
                 <strong>Notifications</strong> &mdash; to alert you about
                 incoming payments and transaction updates
               </li>
+              <li>
+                <strong>Location</strong> &mdash; only for the nearby merchants
+                map, and only while that screen is open. Declining it leaves the
+                rest of the app fully usable.
+              </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-2">
-              The app does not request access to your contacts, location,
-              microphone, or storage. Camera access is used solely for QR code
-              scanning and no images are stored or transmitted.
+              The app does not request access to your contacts, microphone, or
+              storage. Camera access is used solely for QR code scanning and no
+              images are stored or transmitted.
             </p>
           </section>
 
@@ -217,8 +282,12 @@ export default function PrivacyPolicy() {
               </li>
               <li>Contact sync from Nostr is optional and user-controlled</li>
               <li>
-                Lightning Address registration is enabled by default but can be
-                opted out
+                A Lightning Address is claimed automatically when you join a
+                federation; you can change or release it in settings
+              </li>
+              <li>
+                The nearby merchants map is the only feature that uses location,
+                and it only runs when you open it
               </li>
               <li>
                 You can delete all local data by uninstalling the app
