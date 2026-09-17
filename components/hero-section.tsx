@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Smartphone, Monitor, Apple } from "lucide-react"
 import Image from "next/image"
 
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "@/lib/store-links"
+
 interface HeroSectionProps {
   apkDownloadUrl: string
   appImageDownloadUrl: string
@@ -37,6 +39,13 @@ export function HeroSection({ apkDownloadUrl, appImageDownloadUrl, dmgDownloadUr
               </p>
             </div>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+              <Button asChild aria-label="Download on the App Store" size="lg" className="group">
+                <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                  <Apple className="w-4 h-4" />
+                  Download on the App Store
+                  <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
               <Button asChild aria-label="Download Latest APK" size="lg" className="group">
                 <a href={apkDownloadUrl} target="_blank" rel="noopener noreferrer">
                   <Smartphone className="w-4 h-4" />
@@ -59,9 +68,12 @@ export function HeroSection({ apkDownloadUrl, appImageDownloadUrl, dmgDownloadUr
                 </a>
               </Button>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <span className="text-sm text-muted-foreground">Also available on</span>
-              <a href="https://play.google.com/store/apps/details?id=org.fedimint.app&hl=en_US" target="_blank" rel="noopener noreferrer">
+              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                <Image src="/app-store-badge.svg" alt="Download on the App Store" width={126} height={42} />
+              </a>
+              <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer">
                 <Image src="/google-play-badge.png" alt="Get it on Google Play" width={140} height={42} />
               </a>
             </div>
