@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/hero-section"
 import { AppShowcase } from "@/components/app-showcase"
 import { Button } from "@/components/ui/button"
 import { getLatestApkDownloadUrl, getLatestAppImageDownloadUrl, getLatestDmgDownloadUrl } from "@/lib/github"
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "@/lib/store-links"
 
 export default async function Home() {
   const [apkDownloadUrl, appImageDownloadUrl, dmgDownloadUrl] = await Promise.all([
@@ -20,7 +21,14 @@ export default async function Home() {
       <HeroSection apkDownloadUrl={apkDownloadUrl} appImageDownloadUrl={appImageDownloadUrl} dmgDownloadUrl={dmgDownloadUrl} />
       <AppShowcase />
       <section className="container flex flex-col gap-12 mx-auto">
-        <div className="mx-auto px-4 flex justify-center flex-col sm:flex-row gap-4">
+        <div className="mx-auto px-4 flex justify-center flex-col sm:flex-row flex-wrap gap-4">
+          <Button asChild aria-label="Download on the App Store" size="lg" className="group">
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Apple className="w-4 h-4" />
+              Download on the App Store
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </Button>
           <Button asChild aria-label="Download Latest APK" size="lg" className="group">
             <a href={apkDownloadUrl} target="_blank" rel="noopener noreferrer">
               <Smartphone className="w-4 h-4" />
@@ -43,9 +51,12 @@ export default async function Home() {
             </a>
           </Button>
         </div>
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-3">
           <span className="text-sm text-muted-foreground">Also available on</span>
-          <a href="https://play.google.com/store/apps/details?id=org.fedimint.app&hl=en_US" target="_blank" rel="noopener noreferrer">
+          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Image src="/app-store-badge.svg" alt="Download on the App Store" width={126} height={42} />
+          </a>
+          <a href={GOOGLE_PLAY_URL} target="_blank" rel="noopener noreferrer">
             <Image src="/google-play-badge.png" alt="Get it on Google Play" width={140} height={42} />
           </a>
         </div>
